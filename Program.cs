@@ -2,9 +2,14 @@
 
 musica1.nome = "Perfect";
 musica1.artista = "Ed Sheeran";
-Console.WriteLine($"Nome da música: {musica1.nome}");
-Console.WriteLine($"Artista: {musica1.artista}");
+musica1.duracao = 350;
+musica1.disponivel = true;
 
 Musica musica2 = new Musica();
 musica2.nome = "Matilda";
 musica2.artista = "Harry Styles";
+musica2.duracao = 300;
+musica2.disponivel = false;
+
+musica1.ExibirFichaTecnica();
+musica2.ExibirFichaTecnica();
