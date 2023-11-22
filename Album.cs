@@ -1,7 +1,15 @@
 class Album
 {
     private List<Musica> musicas = new List<Musica>();
-    public string Nome {get; set;}
+
+    public Album(string nome, Banda artista)
+    {
+        Nome = nome;
+        Artista = artista;
+    }
+
+    public string Nome { get; set; }
+    public Banda Artista { get; set; }
     public int DuracaoTotal => musicas.Sum(m => m.Duracao);
 
     public void AdicionarMusica(Musica musica)
@@ -10,12 +18,12 @@ class Album
     }
 
     public void ExibirMusicasDoAlbum()
-{
-        Console.WriteLine($"Lista de músicas do álbum {Nome}: \n");
+    {
+        Console.WriteLine($"Lista de músicas do álbum {Nome} da banda {Artista.Nome}:\n");
         foreach (var musica in musicas)
         {
-            Console.WriteLine($"Músicas: {musica.Nome}");
+            Console.WriteLine($"Música: {musica.Nome}");
         }
-        Console.WriteLine($"\nPara ouvir esse álbum você precisa: {DuracaoTotal} segundos.");
+        Console.WriteLine($"\nPara ouvir esse álbum, você precisa de {DuracaoTotal} segundos.");
     }
 }
