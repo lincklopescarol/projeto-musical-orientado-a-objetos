@@ -1,17 +1,11 @@
-﻿Musica musica1 = new Musica();
+﻿Album harrys = new Album();
+harrys.Nome = "Harry's";
 
-musica1.Nome = "Perfect";
-musica1.Artista = "Ed Sheeran";
-musica1.Duracao = 350;
-musica1.Disponivel = true;
-Console.WriteLine(musica1.Disponivel());
+Musica musica1 = new Musica();
+musica1.Nome = "Matilda";
 
 Musica musica2 = new Musica();
-musica2.Nome = "Matilda";
-musica2.Artista = "Harry Styles";
-musica2.Duracao = 300;
-musica2.Disponivel = false;
-Console.WriteLine(musica2.Disponivel());
+musica2.Nome = "Cinema"
 
-musica1.ExibirFichaTecnica();
-musica2.ExibirFichaTecnica();
+harrys.AdicionarMusica(musica1);
+harrys.AdicionarMusica(musica2);
