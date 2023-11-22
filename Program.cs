@@ -12,4 +12,7 @@ musica1.Duracao = 300;
 harrys.AdicionarMusica(musica1);
 harrys.AdicionarMusica(musica2);
 
-harrys.ExibirMusicasDoAlbum();
+Banda oneD = new Banda();
+oneD.Nome = "One D";
+oneD.AdicionarAlbum(harrys);
+oneD.ExibirDiscografia();
